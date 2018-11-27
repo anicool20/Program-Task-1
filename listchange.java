@@ -8,6 +8,7 @@ public class listchange{
 			list2.add(i);
 		}
 		print(combine(list, list2));
+		removeDoubles(combine(list, list2));
 	}
 	public static ArrayList <Integer> combine(ArrayList <Integer> listA, ArrayList <Integer> listB){
 		for(int i = 0; i < listB.size();i++){
@@ -23,5 +24,15 @@ public class listchange{
 			System.out.print(listP.get(i)+", ");
 		}
 		System.out.println();
+	}
+	public static void removeDoubles(ArrayList <Integer> listX){
+		for(int i = 0; i < listX.size();i++){
+			for(int j = 1; j < listX.size(); j++){
+				if(listX.get(i) == listX.get(j))
+				listX.remove(listX.get(j));
+			}
+			j = 1;
+		}
+		print(listX);
 	}
 }
