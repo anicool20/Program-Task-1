@@ -7,5 +7,12 @@ public class listchange{
 			list.add(i);
 			list2.add(i);
 		}
+		combine(list, list2);
+	}
+	public static ArrayList <Integer> combine(ArrayList <Integer> listA, ArrayList <Integer> listB){
+		for(int i = 0; i < listB.size();i++){
+			listA.add(listB.get(i));
+		}
+		return listA;
 	}
 }
